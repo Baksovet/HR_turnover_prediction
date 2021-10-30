@@ -144,3 +144,5 @@ model@leader %>%
 # Save model ----
 model@leaderboard %>% as_tibble() %>% slice(1) %>% pull(model_id) %>% 
   h2o.getModel() %>% h2o.saveModel(path = path)
+
+# You can increase your  max_runtime_secs to improve your model result
